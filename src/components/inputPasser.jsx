@@ -20,3 +20,5 @@ class InputPasser extends Component {
 }
 
 export default InputPasser;
+
+// test by updating the appropriate state elements

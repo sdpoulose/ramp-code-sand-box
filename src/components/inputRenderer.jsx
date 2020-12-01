@@ -2,8 +2,8 @@ import React, { Component } from "react";
 
 class InputRenderer extends Component {
   state = {
-    date: new Date().toLocaleDateString(),
-    time: new Date().toLocaleTimeString()
+    date: new Date().toLocaleDateString(), // get date and time inside
+    time: new Date().toLocaleTimeString() // component upon creation
   };
 
   render() {
@@ -14,6 +14,7 @@ class InputRenderer extends Component {
     listStyleType: "none"
   };
 
+  // helper function to handle all input types
   handleInput(input) {
     if (typeof input === "undefined" || !input) {
       return this.handleTime();
@@ -44,6 +45,7 @@ class InputRenderer extends Component {
     clearInterval(this.interval);
   }
 
+  // handle time separatley
   handleTime() {
     return (
       <div>
